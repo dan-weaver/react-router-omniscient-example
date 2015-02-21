@@ -22,12 +22,12 @@ var App = component(function () {
 }).jsx;
 
 var Even = component(function ({ cursor }) {
-  return <p>Even {cursor.deref()}</p>
+  return <p>Even 2</p>
 }).jsx;
 
 var Odd = component(function ({ cursor, statics }) {
   console.log('the route is', statics.path);
-  return <p>Odd {cursor.deref()}</p>
+  return <p>Odd 1</p>
 }).jsx;
 
 var routes = (
@@ -59,7 +59,7 @@ function rerender (structure, el) {
       break;
     }
 
-    React.render(<Handler cursor={cursor} statics={state} />, el);
+    React.render(<Handler /*cursor={cursor}*/ statics={state} />, el);
   }
 
   structure.on('swap', function() {
